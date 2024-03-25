@@ -314,10 +314,10 @@ impl Client {
         log::info!("rendezvous server: {}", rendezvous_server);
         let mut socket = socket?;
         let my_addr = socket.local_addr();
-        let mut signed_id_pk = Vec::new();
-        let mut relay_server = "".to_owned();
+        /// let mut signed_id_pk = Vec::new();
+        /// let mut relay_server = "".to_owned();
 
-        if !key.is_empty() && !token.is_empty() {
+        /// if !key.is_empty() && !token.is_empty() {
             // mainly for the security of token
             allow_err!(secure_tcp(&mut socket, key).await);
         }
